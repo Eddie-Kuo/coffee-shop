@@ -1,8 +1,8 @@
-import { Slot } from 'expo-router';
-import '../global.css';
+import { Slot } from "expo-router";
+import "../global.css";
 
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React from "react";
+import { StyleSheet } from "react-native";
 
 const RootLayout = () => {
   return <Slot />;
