@@ -7,6 +7,8 @@ const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
+        tabBarLabel: "",
         tabBarStyle: {
           backgroundColor: Colors.black,
           borderTopColor: Colors.black,
@@ -19,11 +21,36 @@ const TabLayout = () => {
       <Tabs.Screen
         name="index"
         options={{
-          headerShown: false,
-          tabBarLabel: "",
-
           tabBarIcon: () => (
-            <Ionicons color={Colors.orange} size={30} name="home-outline" />
+            <Ionicons color={Colors.orange} size={28} name="home-outline" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="cart"
+        options={{
+          tabBarIcon: () => (
+            <Ionicons color={Colors.orange} size={28} name="bag-outline" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favorites"
+        options={{
+          tabBarIcon: () => (
+            <Ionicons color={Colors.orange} size={28} name="heart-outline" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="notifications"
+        options={{
+          tabBarIcon: () => (
+            <Ionicons
+              color={Colors.orange}
+              size={28}
+              name="notifications-outline"
+            />
           ),
         }}
       />
