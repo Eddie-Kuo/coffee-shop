@@ -2,12 +2,40 @@ import Colors from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
+import { SafeAreaView, TouchableOpacity, View } from "react-native";
 
 const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
+        headerTitle: "",
+        headerStyle: {
+          backgroundColor: Colors.black,
+        },
+        headerShadowVisible: false,
+        header: () => (
+          <SafeAreaView className="bg-black">
+            <View className="w-full flex-row justify-between pl-6 pr-6">
+              <TouchableOpacity className="rounded-md bg-darkGrey">
+                <Ionicons
+                  name="grid"
+                  color={Colors.mediumGrey}
+                  className=" p-2"
+                  size={30}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity className="rounded-full bg-darkGrey">
+                <Ionicons
+                  name="person"
+                  color={Colors.mediumGrey}
+                  className="p-2"
+                  size={30}
+                />
+              </TouchableOpacity>
+            </View>
+          </SafeAreaView>
+        ),
         tabBarLabel: "",
         tabBarStyle: {
           backgroundColor: Colors.black,
