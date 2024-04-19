@@ -21,17 +21,17 @@ export const CoffeeData = [
     name: "Cappuccino",
     type: "Coffee",
     category: "Cappuccino",
-    note: "With Steamed Milk",
+    note: "With Foam",
     description:
       "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
     priceSm: 4.2,
     priceMd: 5.35,
     priceLg: 6.0,
-    rating: 4.5,
-    totalReviews: 2374,
+    rating: 4.2,
+    totalReviews: 1289,
     blend: "Medium Roasted",
     imageURL:
-      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ export const CoffeeData = [
     totalReviews: 2374,
     blend: "Medium Roasted",
     imageURL:
-      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/5865232/pexels-photo-5865232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 4,
