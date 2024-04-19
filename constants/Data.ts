@@ -1,5 +1,91 @@
-const Coffee = [
+export const CoffeeData = [
   {
+    id: 1,
+    name: "Cappuccino",
+    type: "Coffee",
+    category: "Cappuccino",
+    note: "With Steamed Milk",
+    description:
+      "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
+    priceSm: 4.2,
+    priceMd: 5.35,
+    priceLg: 6.0,
+    rating: 4.5,
+    totalReviews: 2374,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 2,
+    name: "Cappuccino",
+    type: "Coffee",
+    category: "Cappuccino",
+    note: "With Steamed Milk",
+    description:
+      "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
+    priceSm: 4.2,
+    priceMd: 5.35,
+    priceLg: 6.0,
+    rating: 4.5,
+    totalReviews: 2374,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 3,
+    name: "Cappuccino",
+    type: "Coffee",
+    category: "Cappuccino",
+    note: "With Steamed Milk",
+    description:
+      "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
+    priceSm: 4.2,
+    priceMd: 5.35,
+    priceLg: 6.0,
+    rating: 4.5,
+    totalReviews: 2374,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 4,
+    name: "Cappuccino",
+    type: "Coffee",
+    category: "Cappuccino",
+    note: "With Steamed Milk",
+    description:
+      "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
+    priceSm: 4.2,
+    priceMd: 5.35,
+    priceLg: 6.0,
+    rating: 4.5,
+    totalReviews: 2374,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 5,
+    name: "Cappuccino",
+    type: "Coffee",
+    category: "Cappuccino",
+    note: "With Steamed Milk",
+    description:
+      "Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.",
+    priceSm: 4.2,
+    priceMd: 5.35,
+    priceLg: 6.0,
+    rating: 4.5,
+    totalReviews: 2374,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 6,
     name: "Cappuccino",
     type: "Coffee",
     category: "Cappuccino",
@@ -17,7 +103,7 @@ const Coffee = [
   },
 ];
 
-const Beans = [
+export const BeansData = [
   {
     name: "Robusta Beans",
     type: "Bean",

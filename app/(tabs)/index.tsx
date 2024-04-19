@@ -1,10 +1,16 @@
+import CoffeeCard from "@/components/CoffeeCard";
 import CoffeeList from "@/components/CoffeeList";
 import Colors from "@/constants/Colors";
+import { CoffeeData } from "@/constants/Data";
+import { Coffee } from "@/types";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Text, TextInput, View } from "react-native";
+import { FlatList, ListRenderItem, Text, TextInput, View } from "react-native";
 
 const Index = () => {
+  const renderCoffee: ListRenderItem<Coffee> = ({ item }) => {
+    return <CoffeeCard item={item} />;
+  };
   return (
     <View className="flex-1 bg-black p-6">
       <View className="gap-5">
@@ -21,6 +27,13 @@ const Index = () => {
         </View>
 
         <CoffeeList />
+
+        <FlatList
+          horizontal
+          data={CoffeeData}
+          renderItem={renderCoffee}
+          contentContainerClassName="gap-4"
+        />
       </View>
     </View>
   );
