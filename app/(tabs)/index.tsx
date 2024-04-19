@@ -1,18 +1,14 @@
-import CoffeeCard from "@/components/CoffeeCard";
+import BeansList from "@/components/BeansList";
 import CoffeeList from "@/components/CoffeeList";
 import Colors from "@/constants/Colors";
-import { CoffeeData } from "@/constants/Data";
-import { Coffee } from "@/types";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { FlatList, ListRenderItem, Text, TextInput, View } from "react-native";
+import { ScrollView, Text, TextInput, View } from "react-native";
 
 const Index = () => {
-  const renderCoffee: ListRenderItem<Coffee> = ({ item }) => {
-    return <CoffeeCard item={item} />;
-  };
   return (
     <View className="flex-1 bg-black p-6">
+      {/* Top Header Section */}
       <View className="gap-5">
         <Text className="text-start text-[40px] font-semibold text-white ">
           Find the best{"\n"}coffee for you
@@ -26,15 +22,14 @@ const Index = () => {
           />
         </View>
 
-        <CoffeeList />
+        {/* Content Section */}
+        <ScrollView contentContainerClassName="gap-5">
+          {/* Coffees */}
+          <CoffeeList />
 
-        <FlatList
-          horizontal
-          data={CoffeeData}
-          renderItem={renderCoffee}
-          showsHorizontalScrollIndicator={false}
-          contentContainerClassName="gap-2"
-        />
+          {/* Beans */}
+          <BeansList />
+        </ScrollView>
       </View>
     </View>
   );

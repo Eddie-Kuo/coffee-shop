@@ -2,7 +2,14 @@ import Colors from "@/constants/Colors";
 import { cn } from "@/lib/clsx";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { FlatList, ListRenderItem, Text, TouchableOpacity } from "react-native";
+import {
+  FlatList,
+  ListRenderItem,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import DrinkList from "./DrinkList";
 
 const CoffeeList = () => {
   const [category, setCategory] = useState<string>("All");
@@ -20,14 +27,12 @@ const CoffeeList = () => {
     return (
       <TouchableOpacity
         onPress={() => setCategory(item.item)}
-        className="items-center gap-2"
-      >
+        className="items-center gap-2">
         <Text
           className={cn(
             "text-xl font-semibold text-white",
             selectedCategory ? "text-orange" : "text-mediumGrey",
-          )}
-        >
+          )}>
           {item.item}
         </Text>
         {selectedCategory && (
@@ -38,7 +43,7 @@ const CoffeeList = () => {
   };
 
   return (
-    <>
+    <View className="gap-5">
       <FlatList
         data={categories}
         horizontal
@@ -46,7 +51,8 @@ const CoffeeList = () => {
         contentContainerClassName="gap-5"
         renderItem={renderCategories}
       />
-    </>
+      <DrinkList />
+    </View>
   );
 };
 
