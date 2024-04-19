@@ -2,7 +2,7 @@ import { CoffeeData } from "@/constants/Data";
 import { Coffee } from "@/types";
 import React from "react";
 import { FlatList, ListRenderItem } from "react-native";
-import CoffeeCard from "./CoffeeCard";
+import CoffeeCard from "./ItemCard";
 
 const DrinkList = () => {
   const renderCoffee: ListRenderItem<Coffee> = ({ item }) => {

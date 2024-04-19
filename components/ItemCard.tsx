@@ -1,19 +1,18 @@
 import Colors from "@/constants/Colors";
-import { Coffee } from "@/types";
+import { Bean, Coffee } from "@/types";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
-type CoffeeCardProps = {
-  item: Coffee;
+type ItemCardProps = {
+  item: Coffee | Bean;
 };
-const CoffeeCard = ({ item }: CoffeeCardProps) => {
+const ItemCard = ({ item }: ItemCardProps) => {
   return (
     <LinearGradient
       colors={[Colors.darkGrey, Colors.black]}
-      style={{ gap: 2, padding: 12, borderRadius: 22 }}
-    >
+      style={{ gap: 2, padding: 12, borderRadius: 22 }}>
       <Image
         source={{ uri: item.imageURL }}
         className="h-44 w-44 rounded-3xl"
@@ -35,4 +34,4 @@ const CoffeeCard = ({ item }: CoffeeCardProps) => {
   );
 };
 
-export default CoffeeCard;
+export default ItemCard;

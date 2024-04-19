@@ -105,18 +105,51 @@ export const CoffeeData = [
 
 export const BeansData = [
   {
+    id: 1,
     name: "Robusta Beans",
     type: "Bean",
     note: "From Africa",
     description:
       "Arabica beans are by far the most popular type of coffee beans, making up about 60% of the world’s coffee. These tasty beans originated many centuries ago in the highlands of Ethiopia, and may even be the first coffee beans ever consumed! ",
-    price250gm: 10.5,
-    price500gm: 17.5,
-    price1000gm: 32.75,
+    priceSm: 10.5,
+    priceMd: 17.5,
+    priceLg: 32.75,
     rating: 4.5,
     totalReviews: 5839,
     blend: "Medium Roasted",
     imageURL:
       "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
+  },
+  {
+    id: 2,
+    name: "Arabica Beans",
+    type: "Bean",
+    note: "From Africa",
+    description:
+      "Arabica beans are by far the most popular type of coffee beans, making up about 60% of the world’s coffee. These tasty beans originated many centuries ago in the highlands of Ethiopia, and may even be the first coffee beans ever consumed! ",
+    priceSm: 10.5,
+    priceMd: 17.5,
+    priceLg: 32.75,
+    rating: 4.5,
+    totalReviews: 5839,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/4109748/pexels-photo-4109748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 3,
+    name: "Liberica Beans",
+    type: "Bean",
+    note: "From Africa",
+    description:
+      "Arabica beans are by far the most popular type of coffee beans, making up about 60% of the world’s coffee. These tasty beans originated many centuries ago in the highlands of Ethiopia, and may even be the first coffee beans ever consumed! ",
+    priceSm: 10.5,
+    priceMd: 17.5,
+    priceLg: 32.75,
+    rating: 4.5,
+    totalReviews: 5839,
+    blend: "Medium Roasted",
+    imageURL:
+      "https://images.pexels.com/photos/3914189/pexels-photo-3914189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];

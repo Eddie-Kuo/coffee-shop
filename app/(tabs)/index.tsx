@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <View className="flex-1 bg-black p-6">
       {/* Top Header Section */}
-      <View className="gap-5">
+      <View className="flex-1 gap-5">
         <Text className="text-start text-[40px] font-semibold text-white ">
           Find the best{"\n"}coffee for you
         </Text>
@@ -23,7 +23,10 @@ const Index = () => {
         </View>
 
         {/* Content Section */}
-        <ScrollView contentContainerClassName="gap-5">
+        <ScrollView
+          contentContainerClassName="gap-2"
+          alwaysBounceVertical
+          showsVerticalScrollIndicator={false}>
           {/* Coffees */}
           <CoffeeList />
 
