@@ -32,7 +32,8 @@ const Index = () => {
           horizontal
           data={CoffeeData}
           renderItem={renderCoffee}
-          contentContainerClassName="gap-4"
+          showsHorizontalScrollIndicator={false}
+          contentContainerClassName="gap-2"
         />
       </View>
     </View>
