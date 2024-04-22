@@ -3,11 +3,15 @@ import React from "react";
 import { Text, View } from "react-native";
 
 const ProductScreen = () => {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { productId, productType } = useLocalSearchParams<{
+    productId: string;
+    productType: string;
+  }>();
 
   return (
     <View className="flex-1 items-center justify-center">
-      <Text>Product ID: {id}</Text>
+      <Text>Product ID: {productId}</Text>
+      <Text>Product Type: {productType}</Text>
     </View>
   );
 };

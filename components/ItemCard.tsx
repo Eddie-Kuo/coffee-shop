@@ -13,7 +13,8 @@ const ItemCard = ({ item }: ItemCardProps) => {
   const router = useRouter();
 
   return (
-    <TouchableOpacity onPress={() => router.push(`/(product)/${item.id}`)}>
+    <TouchableOpacity
+      onPress={() => router.push(`/(product)/${item.type}/${item.id}`)}>
       <LinearGradient
         colors={[Colors.darkGrey, Colors.black]}
         style={{ gap: 2, padding: 12, borderRadius: 22 }}>
