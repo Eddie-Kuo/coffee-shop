@@ -16,6 +16,7 @@ const InnerProductLayout = () => {
           headerStyle: {
             backgroundColor: "transparent",
           },
+          // headerShown: false,
 
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()}>

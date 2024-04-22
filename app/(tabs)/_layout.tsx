@@ -44,8 +44,7 @@ const TabLayout = () => {
         tabBarIconStyle: {
           color: Colors.orange,
         },
-      }}
-    >
+      }}>
       <Tabs.Screen
         name="index"
         options={{
