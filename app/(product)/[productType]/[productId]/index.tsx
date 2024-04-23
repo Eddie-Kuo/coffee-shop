@@ -26,6 +26,9 @@ const ProductScreen = () => {
     }
   }, []);
 
+  //* Add a comma into the product total review number
+  const productReviewNumber = productData?.totalReviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
   return (
     <View className="flex-1 items-center justify-center">
       <StatusBar style="light" />
@@ -36,7 +39,9 @@ const ProductScreen = () => {
         />
       </View>
       <View className="w-full basis-3/5 ">
-        <View className="absolute -top-56 h-56 w-full rounded-t-3xl bg-black/50 p-8">
+        <View className="absolute -top-56 h-56 w-full rounded-t-3xl bg-black/50 p-8 gap-5 justify-center">
+
+          {/*Top row info*/}
           <View className="flex-row items-center justify-between">
             <View>
               <Text className="text-2xl font-bold text-white">
@@ -54,6 +59,22 @@ const ProductScreen = () => {
                 <Text className="text-sm text-white">Bean</Text>
               )}
             </View>
+          </View>
+
+          {/*  Bottom row info*/}
+          <View className="flex-row justify-between">
+            <View className="flex-row gap-3 items-center">
+              <Image source={require('@/assets/images/star.png')}/>
+              <Text className="text-white font-bold text-3xl">
+                {productData?.rating}
+              </Text>
+              <Text className={"text-lightGrey"}>({productReviewNumber})</Text>
+            </View>
+          <View className="p-4 bg-darkGrey rounded-xl">
+            <Text className='text-white'>
+              {productData?.blend}
+            </Text>
+          </View>
           </View>
         </View>
         <View>
