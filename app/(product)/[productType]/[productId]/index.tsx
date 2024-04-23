@@ -12,7 +12,6 @@ const ProductScreen = () => {
     productType: string;
   }>();
 
-  // we need to know where to get our data from between beans and coffee datasets
   useEffect(() => {
     if (productType === "Coffee") {
       const data = CoffeeData.find(
@@ -37,7 +36,7 @@ const ProductScreen = () => {
         />
       </View>
       <View className="w-full basis-3/5 ">
-        <View className="absolute -top-56 h-56 w-full rounded-t-3xl bg-black/70 p-8">
+        <View className="absolute -top-56 h-56 w-full rounded-t-3xl bg-black/50 p-8">
           <View className="flex-row items-center justify-between">
             <View>
               <Text className="text-2xl font-bold text-white">
