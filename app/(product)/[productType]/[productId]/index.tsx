@@ -26,7 +26,7 @@ const ProductScreen = () => {
     }
   }, []);
 
-  //* Add a comma into the product total review number
+  // * Add a comma into the product total review number
   const productReviewNumber = productData?.totalReviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
   return (
