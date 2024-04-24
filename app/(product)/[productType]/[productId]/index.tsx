@@ -3,7 +3,7 @@ import { Bean, Coffee } from "@/types";
 import { useLocalSearchParams } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 const ProductScreen = () => {
   const [productData, setProductData] = useState<Coffee | Bean>();
@@ -40,8 +40,8 @@ const ProductScreen = () => {
           className="h-full w-full self-center"
         />
       </View>
-      <View className="w-full basis-3/5 ">
-        <View className="absolute -top-56 h-56 w-full justify-center gap-5 rounded-t-3xl bg-black/50 p-8 ">
+      <View className="w-full basis-4/6 ">
+        <View className="absolute -top-52 h-52 w-full justify-center gap-5 rounded-t-3xl bg-black/50 p-8 ">
           {/*Top row info*/}
           <View className="flex-row items-center justify-between">
             <View>
@@ -93,8 +93,53 @@ const ProductScreen = () => {
             </View>
           </View>
         </View>
-        <View>
-          <Text>Description</Text>
+
+        {/* Description section*/}
+        <View className="h-full w-full gap-2 bg-[#1E1E1E] p-5">
+          <View className="gap-2">
+            <Text className="text-xl font-bold text-lightGrey">
+              Description
+            </Text>
+            <Text className="text-md text-lightGrey">
+              {productData?.description}
+            </Text>
+          </View>
+          <View className={"mt-2 w-full"}>
+            <View className={"w-full flex-row justify-center gap-4"}>
+              <TouchableOpacity
+                className={
+                  "justify-center rounded-xl border-2 border-orange bg-darkGrey px-14 py-3"
+                }>
+                <Text className={"text-xl font-bold text-orange"}>S</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                className={" justify-center rounded-xl bg-darkGrey px-14 py-3"}>
+                <Text className={"text-xl font-bold text-white"}>M</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                className={" justify-center rounded-xl bg-darkGrey px-14 py-3"}>
+                <Text className={"text-xl font-bold text-white"}>L</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View className={"mt-3 flex-row justify-between"}>
+            <View className={"items-center"}>
+              <Text className={"text-xl text-white"}>Price</Text>
+              <View className={"flex-row items-center gap-2"}>
+                <Text className={"text-3xl text-orange"}>$</Text>
+                <Text className={"text-2xl font-bold text-white"}>
+                  {productData?.priceSm.toFixed(2)}
+                </Text>
+              </View>
+            </View>
+            <TouchableOpacity
+              className={"justify-center rounded-3xl bg-orange px-20"}>
+              <Text className={"text-2xl font-bold text-white"}>
+                Add to Cart
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
