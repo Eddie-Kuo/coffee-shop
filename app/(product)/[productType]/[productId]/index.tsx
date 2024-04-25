@@ -104,20 +104,24 @@ const ProductScreen = () => {
               {productData?.description}
             </Text>
           </View>
-          <View className={"mt-2 w-full"}>
-            <View className={"w-full flex-row justify-center gap-4"}>
+          <View className={"mt-2"}>
+            <View className={"flex-row items-center gap-4 self-center px-4"}>
               <TouchableOpacity
                 className={
-                  "justify-center rounded-xl border-2 border-orange bg-darkGrey px-14 py-3"
+                  "basis-1/3 items-center rounded-xl border-2 border-orange bg-darkGrey py-3"
                 }>
                 <Text className={"text-xl font-bold text-orange"}>S</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                className={" justify-center rounded-xl bg-darkGrey px-14 py-3"}>
+                className={
+                  "basis-1/3 items-center rounded-xl bg-darkGrey  py-3"
+                }>
                 <Text className={"text-xl font-bold text-white"}>M</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                className={" justify-center rounded-xl bg-darkGrey px-14 py-3"}>
+                className={
+                  "basis-1/3 items-center rounded-xl bg-darkGrey  py-3"
+                }>
                 <Text className={"text-xl font-bold text-white"}>L</Text>
               </TouchableOpacity>
             </View>
