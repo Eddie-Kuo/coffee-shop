@@ -4,7 +4,7 @@ import { Tabs } from "expo-router";
 import React from "react";
 import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 
-const TabIcon = ({ icon, color, name, focused }: any) => {
+const TabIcon = ({ focused, icon }: any) => {
   return (
     <View className="items-center gap-1">
       <Ionicons
@@ -12,7 +12,6 @@ const TabIcon = ({ icon, color, name, focused }: any) => {
         size={28}
         name={focused ? icon : `${icon}-outline`}
       />
-      <Text className="text-orange">{name}</Text>
     </View>
   );
 };
@@ -59,12 +58,7 @@ const TabLayout = () => {
         name="index"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              color={color}
-              focused={focused}
-              name={"Home"}
-              icon={"home"}
-            />
+            <TabIcon color={color} focused={focused} icon={"home"} />
           ),
         }}
       />
@@ -72,12 +66,7 @@ const TabLayout = () => {
         name="cart"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              color={color}
-              focused={focused}
-              name={"Cart"}
-              icon={"bag"}
-            />
+            <TabIcon color={color} focused={focused} icon={"bag"} />
           ),
         }}
       />
@@ -85,12 +74,7 @@ const TabLayout = () => {
         name="favorites"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              color={color}
-              focused={focused}
-              name={"Favorites"}
-              icon={"heart"}
-            />
+            <TabIcon color={color} focused={focused} icon={"heart"} />
           ),
         }}
       />
@@ -98,12 +82,7 @@ const TabLayout = () => {
         name="notifications"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              color={color}
-              focused={focused}
-              name={"Notifications"}
-              icon={"notifications"}
-            />
+            <TabIcon color={color} focused={focused} icon={"notifications"} />
           ),
         }}
       />
