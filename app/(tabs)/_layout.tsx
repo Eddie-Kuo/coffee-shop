@@ -10,7 +10,7 @@ const TabIcon = ({ icon, color, name, focused }: any) => {
       <Ionicons
         color={Colors.orange}
         size={28}
-        name={focused ? "home" : "home-outline"}
+        name={focused ? icon : `${icon}-outline`}
       />
       <Text className="text-orange">{name}</Text>
     </View>
@@ -59,34 +59,50 @@ const TabLayout = () => {
         name="index"
         options={{
           tabBarIcon: ({ color, focused }) => (
-            <TabIcon color={color} focused={focused} name={"Home"} />
+            <TabIcon
+              color={color}
+              focused={focused}
+              name={"Home"}
+              icon={"home"}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="cart"
         options={{
-          tabBarIcon: () => (
-            <Ionicons color={Colors.orange} size={28} name="bag-outline" />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              color={color}
+              focused={focused}
+              name={"Cart"}
+              icon={"bag"}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="favorites"
         options={{
-          tabBarIcon: () => (
-            <Ionicons color={Colors.orange} size={28} name="heart-outline" />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              color={color}
+              focused={focused}
+              name={"Favorites"}
+              icon={"heart"}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="notifications"
         options={{
-          tabBarIcon: () => (
-            <Ionicons
-              color={Colors.orange}
-              size={28}
-              name="notifications-outline"
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              color={color}
+              focused={focused}
+              name={"Notifications"}
+              icon={"notifications"}
             />
           ),
         }}
