@@ -2,7 +2,20 @@ import Colors from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
-import { SafeAreaView, TouchableOpacity, View } from "react-native";
+import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+
+const TabIcon = ({ icon, color, name, focused }: any) => {
+  return (
+    <View className="items-center gap-1">
+      <Ionicons
+        color={Colors.orange}
+        size={28}
+        name={focused ? "home" : "home-outline"}
+      />
+      <Text className="text-orange">{name}</Text>
+    </View>
+  );
+};
 
 const TabLayout = () => {
   return (
@@ -41,15 +54,12 @@ const TabLayout = () => {
           backgroundColor: Colors.black,
           borderTopColor: Colors.black,
         },
-        tabBarIconStyle: {
-          color: Colors.orange,
-        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          tabBarIcon: () => (
-            <Ionicons color={Colors.orange} size={28} name="home-outline" />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon color={color} focused={focused} name={"Home"} />
           ),
         }}
       />

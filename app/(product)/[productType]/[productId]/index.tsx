@@ -100,9 +100,6 @@ const ProductScreen = () => {
             <Text className="text-xl font-bold text-lightGrey">
               Description
             </Text>
-            <Text className="text-md text-lightGrey">
-              {productData?.description}
-            </Text>
           </View>
           <View className={"mt-2"}>
             <View className={"flex-row items-center gap-4 self-center px-4"}>

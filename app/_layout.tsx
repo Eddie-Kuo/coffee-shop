@@ -8,9 +8,9 @@ import { StyleSheet } from "react-native";
 const RootLayout = () => {
   const colorScheme = useColorScheme();
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="(product)" options={{ headerShown: false }} />
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="(product)" />
     </Stack>
   );
 };
